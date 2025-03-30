@@ -1,0 +1,120 @@
+# Cine-Craze Project Rules
+
+## Coding Patterns
+
+### Component Structure
+
+- Components are organized in a flat structure within the `src/components` directory
+- Each component is in its own file with the same name as the component
+- Components use default exports
+- Component files use PascalCase naming convention
+
+### Styling Approach
+
+- Tailwind CSS is used for styling with utility classes
+- Custom colors are defined in tailwind.config.js with cc1-cc4 naming convention
+- Responsive design uses Tailwind's built-in breakpoint utilities
+- Custom font sizes are defined in tailwind.config.js with hl, hm, hs, hxs, bm, bs naming convention
+
+### State Management
+
+- React hooks (useState, useEffect) are used for state management
+- API calls are centralized in the App component
+- State is passed down to child components via props
+- Loading and error states are managed at the App level
+
+### API Integration
+
+- OMDB API is used for fetching movie and TV series data
+- API key is stored as a constant in App.js
+- Error handling is implemented for API calls
+- Default search query is "one piece"
+
+## Project Preferences
+
+### Code Style
+
+- 2-space indentation
+- No semicolons at the end of statements
+- Single quotes for strings
+- Arrow functions for component definitions
+- Destructuring for props
+
+### Component Organization
+
+- UI components are separated from container components
+- Reusable components are kept small and focused
+- Component props are explicitly defined
+
+### File Organization
+
+- Assets are stored in the public/assets directory
+- Images are in public/assets/images
+- CSS files are in public/assets/css
+- JavaScript utilities are in public/assets/js
+
+### Naming Conventions
+
+- Component files: PascalCase.js (e.g., MovieList.js)
+- CSS classes: kebab-case (e.g., movie-item)
+- JavaScript variables: camelCase (e.g., movieList)
+- Constants: UPPER_SNAKE_CASE (e.g., API_KEY)
+
+## Implementation Notes
+
+### Navigation
+
+- Navigation is currently visual only, without actual routing
+- NavItem components are used for navigation items
+- Active state for navigation items is not yet implemented
+
+### Bookmarking
+
+- Bookmark component is visual only, without actual functionality
+- Bookmark icon toggles between empty and full states (not yet implemented)
+- Bookmarked items will be stored in local storage (planned)
+
+### Search
+
+- Search is implemented with controlled input
+- Search triggers API calls on input change
+- Default search query is set to "one piece"
+
+### Modal
+
+- Modal component exists but is not fully integrated
+- Modal will be used for displaying detailed movie information
+- Modal is triggered by a button in the Box component
+
+## Known Challenges
+
+### API Limitations
+
+- OMDB API has rate limits and requires an API key
+- Search results are paginated and limited in number
+- Some movie/TV show data may be incomplete or missing
+
+### Performance Considerations
+
+- Large image assets may impact load times
+- API calls should be optimized to reduce latency
+- Component re-renders should be minimized for better performance
+
+## Future Development Guidelines
+
+### State Management Evolution
+
+- Consider implementing Context API or Redux for more complex state management
+- Create custom hooks for reusable logic
+
+### Routing Implementation
+
+- Use React Router for navigation between different sections
+- Implement route-based filtering for Movies and TV Series sections
+
+### Feature Expansion
+
+- Implement bookmarking with local storage
+- Add pagination for search results
+- Enhance the modal with detailed movie information
+- Add filtering by content type
