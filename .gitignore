@@ -21,3 +21,17 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Avoid accidental upload of the Sketch and Figma design files
+*.sketch
+*.fig
+
+# Avoid accidental XD upload if you convert the design file
+*.xd
+
+# Avoid your project being littered with annoying .DS_Store files!
+.prettierignore
+
+# Memory bank and project rules
+/memory-bank/
+.clinerules

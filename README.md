@@ -1,70 +1,116 @@
-# Getting Started with Create React App
+# Cine-Craze 🎬
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern React application for discovering and organizing movies and TV series.
 
-## Available Scripts
+![Cine-Craze Screenshot](./public/assets/images/logo.svg)
 
-In the project directory, you can run:
+## Overview
 
-### `npm start`
+Cine-Craze is a web application that allows users to browse, search, and bookmark movies and TV series. Built with React and styled with Tailwind CSS, it provides a clean, intuitive interface for exploring entertainment content.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Search**: Find movies and TV series by title
+- **Browse**: Explore content by category (Movies, TV Series)
+- **Bookmark**: Save your favorite content for later viewing
+- **Responsive Design**: Optimized for all screen sizes
 
-### `npm test`
+## Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Frontend**: React.js
+- **Styling**: Tailwind CSS
+- **API**: OMDB API for movie and TV series data
+- **State Management**: React Hooks (useState, useEffect)
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Node.js (v14 or higher)
+- npm or yarn
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+1. Clone the repository:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   git clone https://github.com/your-username/cine-craze.git
+   cd cine-craze
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Install dependencies:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Start the development server:
 
-## Learn More
+   ```bash
+   npm start
+   # or
+   yarn start
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Project Structure
 
-### Code Splitting
+```
+cine-craze/
+├── public/                 # Static assets
+│   ├── assets/             # Images, CSS, and other static files
+│   └── index.html          # HTML template
+├── src/                    # Source code
+│   ├── components/         # React components
+│   ├── App.js              # Main application component
+│   ├── index.css           # Global styles
+│   └── index.js            # Application entry point
+└── package.json            # Project dependencies and scripts
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Usage
 
-### Analyzing the Bundle Size
+- **Home**: Browse recommended content
+- **Movies**: Filter to show only movies
+- **TV Series**: Filter to show only TV series
+- **Bookmarked**: View your saved content
+- **Search**: Enter keywords to find specific titles
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Development
 
-### Making a Progressive Web App
+### Available Scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- `npm start`: Run the development server
+- `npm build`: Build the app for production
+- `npm test`: Run tests
+- `npm eject`: Eject from Create React App
 
-### Advanced Configuration
+### Styling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The project uses Tailwind CSS for styling. Custom colors and font sizes are defined in `tailwind.config.js`.
 
-### Deployment
+## Future Enhancements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- User authentication
+- Advanced search filters
+- Ratings and reviews
+- Recommendations based on viewing history
+- Offline support
 
-### `npm run build` fails to minify
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgements
+
+- [OMDB API](http://www.omdbapi.com/) for providing movie and TV series data
+- [Frontend Mentor](https://www.frontendmentor.io) for the design inspiration
+- [Tailwind CSS](https://tailwindcss.com/) for the utility-first CSS framework
+- [React](https://reactjs.org/) for the JavaScript library
