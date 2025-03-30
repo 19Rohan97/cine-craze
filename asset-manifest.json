@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/cine-craze/static/css/main.6ecd7289.css",
-    "main.js": "/cine-craze/static/js/main.87729c64.js",
+    "main.js": "/cine-craze/static/js/main.6a5086cd.js",
     "index.html": "/cine-craze/index.html",
     "main.6ecd7289.css.map": "/cine-craze/static/css/main.6ecd7289.css.map",
-    "main.87729c64.js.map": "/cine-craze/static/js/main.87729c64.js.map"
+    "main.6a5086cd.js.map": "/cine-craze/static/js/main.6a5086cd.js.map"
   },
   "entrypoints": [
     "static/css/main.6ecd7289.css",
-    "static/js/main.87729c64.js"
+    "static/js/main.6a5086cd.js"
   ]
 }
