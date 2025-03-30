@@ -43,7 +43,7 @@ export default function App() {
           setError("");
 
           const res = await fetch(
-            `http://www.omdbapi.com/?apikey=${KEY}&s=${query}&page=${page}`
+            `https://www.omdbapi.com/?apikey=${KEY}&s=${query}&page=${page}`
           );
 
           if (!res.ok)

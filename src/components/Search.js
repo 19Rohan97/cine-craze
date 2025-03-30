@@ -2,7 +2,7 @@ export default function Search({ query, setQuery }) {
   return (
     <div className="search-movie flex items-start gap-6">
       <img
-        src="/assets/images/icon-search.svg"
+        src="/cine-craze/assets/images/icon-search.svg"
         alt="Search"
         className="w-8 h-8"
       />

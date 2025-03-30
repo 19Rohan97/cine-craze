@@ -20,12 +20,15 @@ export default function Box({ movie, onPopup }) {
       </div>
       <div className="movie-meta text-white flex gap-2 opacity-75 items-center mt-2 mb-1">
         <span className="movie-year">{movie.Year.split("–")[0]}</span>
-        <img src="/assets/images/icon-divider.svg" alt="Movies" />
+        <img src="/cine-craze/assets/images/icon-divider.svg" alt="Movies" />
         <span className="movie-type flex gap-2 items-center capitalize">
-          <img src="/assets/images/icon-category-movie.svg" alt="Movies" />
+          <img
+            src="/cine-craze/assets/images/icon-category-movie.svg"
+            alt="Movies"
+          />
           {movie.Type}
         </span>
-        <img src="/assets/images/icon-divider.svg" alt="Movies" />
+        <img src="/cine-craze/assets/images/icon-divider.svg" alt="Movies" />
         <span className="movie-rated">PG</span>
       </div>
       <h4 className="hxs font-medium text-white">{movie.Title}</h4>
