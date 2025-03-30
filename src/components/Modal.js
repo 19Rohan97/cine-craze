@@ -27,6 +27,10 @@ export default function Modal({ onPopup, selectedID }) {
     [selectedID]
   );
 
+  const url = movie.Poster;
+  // const updatedURL = movie.Poster.replace(/SX\d+/, "SX");
+  const updatedURL = movie.Poster ? movie.Poster.replace(/SX\d+/, "SX") : "";
+
   return (
     <div className="modal w-full h-full">
       <div className="bg-overlay size-full fixed top-0 start-0 z-80 overflow-x-hidden overflow-y-auto pointer-events-none">
@@ -68,7 +72,7 @@ export default function Modal({ onPopup, selectedID }) {
                 <img
                   src={
                     movie.Poster !== "N/A"
-                      ? movie.Poster
+                      ? updatedURL
                       : `https://dummyimage.com/280x300/000/ffffff&text=${movie.Title}`
                   }
                   alt={movie.Title}
