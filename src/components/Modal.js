@@ -54,13 +54,16 @@ export default function Modal({ onPopup, selectedID }) {
     [selectedID]
   );
 
-  useEffect(function () {
-    document.title = `${movie.Title}`;
+  useEffect(
+    function () {
+      document.title = `${movie.Title}`;
 
-    return function () {
-      document.title = "CineCraze";
-    };
-  });
+      return function () {
+        document.title = "CineCraze";
+      };
+    },
+    [movie.Title]
+  );
 
   const updatedURL = movie.Poster ? movie.Poster.replace(/SX\d+/, "SX") : null;
 
