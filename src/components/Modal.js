@@ -8,28 +8,61 @@ const KEY = "59c25c3c";
 export default function Modal({ onPopup, selectedID }) {
   const [movie, setMovie] = useState({});
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
 
   useEffect(
     function () {
-      async function getMovieDetails() {
-        setIsLoading(true);
-        const res = await fetch(
-          `https://www.omdbapi.com/?apikey=${KEY}&i=${selectedID}`
-        );
+      const controller = new AbortController();
 
-        const data = await res.json();
-        setMovie(data);
-        setIsLoading(false);
+      async function getMovieDetails() {
+        try {
+          setIsLoading(true);
+
+          setError("");
+
+          const res = await fetch(
+            `https://www.omdbapi.com/?apikey=${KEY}&i=${selectedID}`,
+            { signal: controller.signal }
+          );
+
+          if (!res.ok)
+            throw new Error("Something went wrong with fetching Movies");
+
+          const data = await res.json();
+
+          if (data.Response === "False") {
+            throw new Error("Movie not Found");
+          }
+
+          setMovie(data);
+          setError("");
+        } catch (error) {
+          if (error.name !== "AbortError") {
+            setError(error.message);
+          }
+        } finally {
+          setIsLoading(false);
+        }
       }
 
       getMovieDetails();
+
+      return function () {
+        controller.abort();
+      };
     },
     [selectedID]
   );
 
-  const url = movie.Poster;
-  // const updatedURL = movie.Poster.replace(/SX\d+/, "SX");
-  const updatedURL = movie.Poster ? movie.Poster.replace(/SX\d+/, "SX") : "";
+  useEffect(function () {
+    document.title = `${movie.Title}`;
+
+    return function () {
+      document.title = "CineCraze";
+    };
+  });
+
+  const updatedURL = movie.Poster ? movie.Poster.replace(/SX\d+/, "SX") : null;
 
   return (
     <div className="modal w-full h-full">
